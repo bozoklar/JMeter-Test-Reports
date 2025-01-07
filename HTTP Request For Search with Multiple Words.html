@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request For Search with Multiple Words">
+      <stringProp name="TestPlan.comments">Test how the search functionality behaves when multiple words are entered (e.g., &quot;Gaming Laptop&quot;).
+The search should return products related to both &quot;Gaming&quot; and &quot;Laptop.&quot;</stringProp>
+      <stringProp name="HTTPSampler.path">/arama?q=Gaming+Laptop</stringProp>
+      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+      <stringProp name="HTTPSampler.method">GET</stringProp>
+      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+      <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+      <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </HTTPSamplerProxy>
+    <hashTree>
+      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion- Search with Multiple Words">
+        <collectionProp name="Asserion.test_strings">
+          <stringProp name="2125602895">Gaming</stringProp>
+          <stringProp name="-2026118662">Laptop</stringProp>
+        </collectionProp>
+        <stringProp name="Assertion.custom_message">No results found</stringProp>
+        <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+        <boolProp name="Assertion.assume_success">false</boolProp>
+        <intProp name="Assertion.test_type">2</intProp>
+        <stringProp name="TestPlan.comments">Response Assertion to check that both keywords are present in the response.</stringProp>
+      </ResponseAssertion>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

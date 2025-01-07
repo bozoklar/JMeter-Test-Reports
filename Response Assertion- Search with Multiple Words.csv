@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion- Search with Multiple Words">
+      <collectionProp name="Asserion.test_strings">
+        <stringProp name="2125602895">Gaming</stringProp>
+        <stringProp name="-2026118662">Laptop</stringProp>
+      </collectionProp>
+      <stringProp name="Assertion.custom_message">No results found</stringProp>
+      <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+      <boolProp name="Assertion.assume_success">false</boolProp>
+      <intProp name="Assertion.test_type">2</intProp>
+      <stringProp name="TestPlan.comments">Response Assertion to check that both keywords are present in the response.</stringProp>
+    </ResponseAssertion>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

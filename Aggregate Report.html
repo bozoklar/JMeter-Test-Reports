@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+      <boolProp name="ResultCollector.error_logging">true</boolProp>
+      <objProp>
+        <name>saveConfig</name>
+        <value class="SampleSaveConfiguration">
+          <time>true</time>
+          <latency>true</latency>
+          <timestamp>true</timestamp>
+          <success>true</success>
+          <label>true</label>
+          <code>true</code>
+          <message>true</message>
+          <threadName>true</threadName>
+          <dataType>true</dataType>
+          <encoding>true</encoding>
+          <assertions>true</assertions>
+          <subresults>true</subresults>
+          <responseData>true</responseData>
+          <samplerData>true</samplerData>
+          <xml>true</xml>
+          <fieldNames>true</fieldNames>
+          <responseHeaders>true</responseHeaders>
+          <requestHeaders>true</requestHeaders>
+          <responseDataOnError>false</responseDataOnError>
+          <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+          <assertionsResultsToSave>0</assertionsResultsToSave>
+          <bytes>true</bytes>
+          <sentBytes>true</sentBytes>
+          <url>true</url>
+          <fileName>true</fileName>
+          <hostname>true</hostname>
+          <threadCounts>true</threadCounts>
+          <sampleCount>true</sampleCount>
+          <idleTime>true</idleTime>
+          <connectTime>true</connectTime>
+        </value>
+      </objProp>
+      <stringProp name="filename"></stringProp>
+      <stringProp name="TestPlan.comments">Monitor the response times and errors -to analyze overall performance metrics like response time, throughput, and error rates.
+Provides a detailed summary of response times, throughput, error rates, and other key performance indicators (KPIs) in an aggregated table format.
+Provides an excellent high-level overview of test performance across all requests.
+
+The Aggregate Report summarizes important statistics, such as:
+Label: The name of the request.
+Samples: The number of requests processed.
+Average Response Time: The average time for all requests.
+Min/Max Response Time: The fastest and slowest request times.
+Throughput: Requests per minute.
+Error %: The percentage of failed requests.</stringProp>
+    </ResultCollector>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
